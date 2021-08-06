@@ -1,0 +1,23 @@
+{
+  "name": "edc",
+  "version": "1.0.0",
+  "description": "Entrepreneurship Development Cell, BV(DU)COEP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikharkesari/EDC.git"
+  },
+  "author": "Nikhar Kesari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikharkesari/EDC/issues"
+  },
+  "homepage": "https://github.com/nikharkesari/EDC#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
+  }
+}
