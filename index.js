@@ -5,17 +5,21 @@ app.listen(3000, () => console.log('listening...'));
 app.use(express.static('public'));
 app.use(express.json({ limit: '1mb' }));
 
-const database = new datastore('databse.db');
+const database = new datastore('database.db');
 database.loadDatabase();
 
 app.get('/api', (request, response) => {
-    response.json({ a: 1 });
+    database.find({}, (err, data) => {
+        if (err) {
+            response.end();
+            return;
+        }
+        response.json(data);
+    });
 });
 
 app.post('/api', (request, response) => {
     const data = request.body;
-    console.log(data);
-    database.insert({ b: 2 });
-    console.log(database);
+    database.insert(data);
     response = 'data posted successfully';
 });
